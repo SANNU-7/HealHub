@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Symptoms Checker - Symptom Checker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.jpg" alt="AI Symptoms Checker Logo" class="logo-img">
+                <span class="logo-text">HealHub</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="symptom-checker.html" class="nav-link active">Symptom Checker</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Symptom Checker Section -->
+    <section class="symptom-checker">
+        <div class="checker-container">
+            <h2 class="checker-title">Symptom Checker</h2>
+            <p class="checker-subtitle">Select or type symptoms. We match them to a curated dataset to suggest possible
+                conditions with a match score.</p>
+
+            <div class="symptom-form">
+                <div class="symptoms-grid">
+                    <h3>Common Symptoms</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="fever">
+                            <span class="checkmark"></span>
+                            <i class="fas fa-thermometer-half"></i>
+                            Fever
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="cough">
+                            <span class="checkmark"></span>
+                            <i class="fas fa-lungs"></i>
+                            Cough
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="headache">
+                            <span class="checkmark"></span>
+                            <i class="fas fa-head-side-virus"></i>
+                            Headache
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="sore-throat">
+                            <span class="checkmark"></span>
+                            <i class="fas fa-head-side-mask"></i>
+                            Sore Throat
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="nausea">
+                            <span class="checkmark"></span>
+                            <i class="fas fa-dizzy"></i>
+                            Nausea
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="fatigue">
+                            <span class="checkmark"></span>
+                            <i class="fas fa-bed"></i>
+                            Fatigue
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="body-ache">
+                            <span class="checkmark"></span>
+                            <i class="fas fa-bone"></i>
+                            Body Ache
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="shortness-breath">
+                            <span class="checkmark"></span>
+                            <i class="fas fa-wind"></i>
+                            Shortness of Breath
+                        </label>
+                    </div>
+                </div>
+
+                <div class="custom-symptoms">
+                    <h3>Additional Symptoms</h3>
+                    <div class="textarea-wrapper">
+                        <textarea id="custom-symptoms" placeholder="Enter any other symptoms you're experiencing..."
+                            rows="4"></textarea>
+                        <button type="button" id="voice-mic-btn" class="voice-mic-btn" aria-label="Start voice input">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <button id="check-symptoms" class="cta-button">
+                    <i class="fas fa-search"></i>
+                    Check Symptoms
+                </button>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results-section" class="results-section" style="display: none;">
+                <h3>Analysis Results</h3>
+                <div id="results-content" class="results-content"></div>
+                <button id="check-again" class="secondary-button">
+                    <i class="fas fa-redo"></i>
+                    Check Again
+                </button>
+            </div>
+
+            <!-- Recent Checks Section -->
+            <div class="recent-checks">
+                <h3>Recent Symptom Checks</h3>
+                <div id="recent-checks-list" class="recent-checks-list"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>HealHub Symptoms Checker</h3>
+                <p>This is for educational use only. It is not medical advice.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                    <li><a href="about.html">About</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 HealHub Symptoms Checker. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="symptom-checker.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
